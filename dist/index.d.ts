@@ -375,6 +375,8 @@ declare const LAB_BOOST_ENERGY: number;
 declare const LAB_BOOST_MINERAL: number;
 declare const LAB_COOLDOWN: number;
 declare const LAB_REACTION_AMOUNT: number;
+declare const LAB_UNBOOST_ENERGY: number;
+declare const LAB_UNBOOST_MINERAL: number;
 
 declare const GCL_POW: number;
 declare const GCL_MULTIPLY: number;
@@ -765,6 +767,8 @@ declare const ORDER_BUY: ORDER_BUY;
 
 declare const MARKET_MAX_ORDERS: 300;
 declare const MARKET_ORDER_LIFE_TIME: 2592000000; // 1000*60*60*24*30
+
+declare const POWER_BANK_RESPAWN_TIME: number;
 
 declare const INVADERS_ENERGY_GOAL: number;
 
@@ -1533,7 +1537,7 @@ interface Game {
     /**
      * A hash containing all your structures with structure id as hash keys.
      */
-    structures: { [structureId: string]: Structure };
+    structures: { [structureId: string]: AnyOwnedStructure };
 
     /**
      * A hash containing all your construction sites with their id as hash keys.
